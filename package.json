@@ -1,0 +1,31 @@
+{
+  "name": "sdp_validator",
+  "version": "0.1.0",
+  "description": "sdp-validator is a Node library that allows us to validate data easily, such as an email or a phone number.",
+  "main": "dist-node/index.js",
+  "browser": "dist-browser/index.js",
+  "scripts": {
+    "build-browser": "tsc src/index.ts --outDir dist-browser --module ES6",
+    "build-node": "tsc src/index.ts --outDir dist-node",
+    "build": "npm run build-browser && npm run build-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josemiguel736/sdp_validator.git"
+  },
+  "keywords": [
+    "validator",
+    "validate",
+    "data-checker",
+    "checker"
+  ],
+  "author": "Josemiguel736",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Josemiguel736/sdp_validator/issues"
+  },
+  "homepage": "https://github.com/Josemiguel736/sdp_validator#readme",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
