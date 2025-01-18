@@ -55,7 +55,7 @@ var validateUrl = function (params) {
     return urlRegex.test(params);
 };
 exports.validateUrl = validateUrl;
-var passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+var passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
 /**
  * Validate passwords with at least 8 characters, including one uppercase character,
  * one number, and one special character.
