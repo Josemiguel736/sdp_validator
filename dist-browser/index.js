@@ -36,19 +36,19 @@ export var validateCreditCard = function (params) {
     }
     return creditCardRegex.test(params.toString());
 };
-var urlRegex = new RegExp(/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/);
+var urlRegex = new RegExp(/^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/);
 /**
- * Validates URLs with http, https or without protocol.
- * @param url to validate
- * @returns True if the url is valid, false otherwise.
- */
+* Validates URLs with http, https or without protocol.
+* @param url to validate
+* @returns True if the url is valid, false otherwise.
+*/
 export var validateUrl = function (params) {
     if (typeof params !== "string") {
         return false;
     }
     return urlRegex.test(params);
 };
-var passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+var passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_\-+={}[\]|\\:;"'<>,.?/~`])[A-Za-z\d!@#$%^&*()_\-+={}[\]|\\:;"'<>,.?/~`]{8,}$/);
 /**
  * Validate passwords with at least 8 characters, including one uppercase character,
  * one number, and one special character.

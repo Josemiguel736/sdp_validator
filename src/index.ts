@@ -40,8 +40,8 @@ export const validateCreditCard = function (params: number): boolean {
     return creditCardRegex.test(params.toString())
 }
 
-const urlRegex = new RegExp(/^(http(s?):\/\/)?(www\.)?+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/)
-/**
+const urlRegex = new RegExp(/^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/)
+  /**
  * Validates URLs with http, https or without protocol.
  * @param url to validate
  * @returns True if the url is valid, false otherwise.
