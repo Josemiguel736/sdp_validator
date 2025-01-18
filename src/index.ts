@@ -40,7 +40,7 @@ export const validateCreditCard = function (params: number): boolean {
     return creditCardRegex.test(params.toString())
 }
 
-const urlRegex = new RegExp(/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/)
+const urlRegex = new RegExp(/^(http(s?):\/\/)?(www\.)?+[a-zA-Z0-9\.\-\_]+(\.[a-zA-Z]{2,3})+(\/[a-zA-Z0-9\_\-\s\.\/\?\%\#\&\=]*)?$/)
 /**
  * Validates URLs with http, https or without protocol.
  * @param url to validate
@@ -53,7 +53,7 @@ export const  validateUrl = function(params:string):boolean {
     return urlRegex.test(params)  
 }
 
-const passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
+const passwordRegex = new RegExp(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_\-+={}[\]|\\:;"'<>,.?/~`])[A-Za-z\d!@#$%^&*()_\-+={}[\]|\\:;"'<>,.?/~`]{8,}$/)
 /**
  * Validate passwords with at least 8 characters, including one uppercase character, 
  * one number, and one special character.
